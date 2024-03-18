@@ -1,5 +1,11 @@
 # turborepo-demo-core
 
+## 0.0.7
+
+### Patch Changes
+
+- d9eb91d: test print
+
 ## 0.0.6
 
 ### Patch Changes
