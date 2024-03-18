@@ -8,9 +8,6 @@ importers:
 
   .:
     devDependencies:
-      '@acme/eslint-config':
-        specifier: workspace:*
-        version: link:packages/eslint-config
       '@changesets/cli':
         specifier: ^2.27.1
         version: 2.27.1
@@ -23,15 +20,12 @@ importers:
       turbo:
         specifier: ^1.12.4
         version: 1.12.4
+      turborepo-demo-eslint-config:
+        specifier: workspace:*
+        version: link:packages/eslint-config
 
   apps/docs:
     dependencies:
-      '@acme/core':
-        specifier: workspace:*
-        version: link:../../packages/acme-core
-      '@acme/utils':
-        specifier: workspace:*
-        version: link:../../packages/acme-utils
       next:
         specifier: ^14.1.1
         version: 14.1.1(react-dom@18.2.0)(react@18.2.0)
@@ -41,13 +35,13 @@ importers:
       react-dom:
         specifier: ^18.2.0
         version: 18.2.0(react@18.2.0)
+      turborepo-demo-core:
+        specifier: workspace:*
+        version: link:../../packages/turborepo-demo-core
+      turborepo-demo-utils:
+        specifier: workspace:*
+        version: link:../../packages/turborepo-demo-utils
     devDependencies:
-      '@acme/eslint-config':
-        specifier: workspace:*
-        version: link:../../packages/eslint-config
-      '@acme/tsconfig':
-        specifier: workspace:*
-        version: link:../../packages/acme-tsconfig
       '@types/node':
         specifier: ^20.11.24
         version: 20.11.24
@@ -57,62 +51,12 @@ importers:
       '@types/react-dom':
         specifier: ^18.2.19
         version: 18.2.19
-      typescript:
-        specifier: ^5.3.3
-        version: 5.3.3
-
-  packages/acme-core:
-    devDependencies:
-      '@acme/eslint-config':
+      turborepo-demo-eslint-config:
         specifier: workspace:*
-        version: link:../eslint-config
-      '@acme/tsconfig':
+        version: link:../../packages/eslint-config
+      turborepo-demo-tsconfig:
         specifier: workspace:*
-        version: link:../acme-tsconfig
-      '@types/react':
-        specifier: ^18.2.61
-        version: 18.2.61
-      '@types/react-dom':
-        specifier: ^18.2.19
-        version: 18.2.19
-      eslint:
-        specifier: ^8.57.0
-        version: 8.57.0
-      react:
-        specifier: ^18.2.0
-        version: 18.2.0
-      tsup:
-        specifier: ^8.0.2
-        version: 8.0.2(typescript@5.3.3)
-      typescript:
-        specifier: ^5.3.3
-        version: 5.3.3
-
-  packages/acme-tsconfig: {}
-
-  packages/acme-utils:
-    devDependencies:
-      '@acme/eslint-config':
-        specifier: workspace:*
-        version: link:../eslint-config
-      '@acme/tsconfig':
-        specifier: workspace:*
-        version: link:../acme-tsconfig
-      '@types/react':
-        specifier: ^18.2.61
-        version: 18.2.61
-      '@types/react-dom':
-        specifier: ^18.2.19
-        version: 18.2.19
-      eslint:
-        specifier: ^8.57.0
-        version: 8.57.0
-      react:
-        specifier: ^18.2.0
-        version: 18.2.0
-      tsup:
-        specifier: ^8.0.2
-        version: 8.0.2(typescript@5.3.3)
+        version: link:../../packages/turborepo-demo-tsconfig
       typescript:
         specifier: ^5.3.3
         version: 5.3.3
@@ -137,6 +81,62 @@ importers:
       eslint-plugin-only-warn:
         specifier: ^1.1.0
         version: 1.1.0
+      typescript:
+        specifier: ^5.3.3
+        version: 5.3.3
+
+  packages/turborepo-demo-core:
+    devDependencies:
+      '@types/react':
+        specifier: ^18.2.61
+        version: 18.2.61
+      '@types/react-dom':
+        specifier: ^18.2.19
+        version: 18.2.19
+      eslint:
+        specifier: ^8.57.0
+        version: 8.57.0
+      react:
+        specifier: ^18.2.0
+        version: 18.2.0
+      tsup:
+        specifier: ^8.0.2
+        version: 8.0.2(typescript@5.3.3)
+      turborepo-demo-eslint-config:
+        specifier: workspace:*
+        version: link:../eslint-config
+      turborepo-demo-tsconfig:
+        specifier: workspace:*
+        version: link:../turborepo-demo-tsconfig
+      typescript:
+        specifier: ^5.3.3
+        version: 5.3.3
+
+  packages/turborepo-demo-tsconfig: {}
+
+  packages/turborepo-demo-utils:
+    devDependencies:
+      '@types/react':
+        specifier: ^18.2.61
+        version: 18.2.61
+      '@types/react-dom':
+        specifier: ^18.2.19
+        version: 18.2.19
+      eslint:
+        specifier: ^8.57.0
+        version: 8.57.0
+      react:
+        specifier: ^18.2.0
+        version: 18.2.0
+      tsup:
+        specifier: ^8.0.2
+        version: 8.0.2(typescript@5.3.3)
+      turborepo-demo-eslint-config:
+        specifier: workspace:*
+        version: link:../eslint-config
+      turborepo-demo-tsconfig:
+        specifier: workspace:*
+        version: link:../turborepo-demo-tsconfig
       typescript:
         specifier: ^5.3.3
         version: 5.3.3

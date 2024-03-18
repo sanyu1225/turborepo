@@ -1,6 +1,7 @@
 {
-  "exclude": ["node_modules"],
-  "extends": "@acme/tsconfig/nextjs.json",
+  "exclude": [
+    "node_modules"
+  ],
   "compilerOptions": {
     "outDir": "dist",
     "incremental": true,
@@ -8,7 +9,26 @@
       {
         "name": "next"
       }
-    ]
+    ],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve"
   },
-  "include": ["src", "next-env.d.ts", ".next/types/**/*.ts"]
+  "include": [
+    "src",
+    "next-env.d.ts",
+    ".next/types/**/*.ts"
+  ]
 }
