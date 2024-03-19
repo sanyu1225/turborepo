@@ -44,7 +44,7 @@ jobs:
 
       - name: set version in variables
         id: print
-        run:  PACKAGE_VERSION=$(cat packages/turbore-demo-core/package.json | jq '.version' | tr -d '"') 
+        run:  PACKAGE_VERSION=$(cat packages/turborepo-demo-core/package.json | jq '.version' | tr -d '"') 
               echo "current-version=${PACKAGE_VERSION}" >> $GITHUB_OUTPUT
               echo " ${{ steps.package-version.outputs.current-version}}. ~~~ "
             
