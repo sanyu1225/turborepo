@@ -1,5 +1,11 @@
 # turborepo-demo-core
 
+## 0.0.12
+
+### Patch Changes
+
+- 907ad53: test another
+
 ## 0.0.11
 
 ### Patch Changes
