@@ -38,7 +38,11 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-      - name: Print version if a publish happens
+      - name: Set version from publishedPackages
         if: steps.changesets.outputs.published == 'true'
-        run: echo "A new version of ${GITHUB_REPOSITORY} was published! ${{ steps.changesets.outputs.publishedPackages }}! ${{ toJSON(steps.changesets.outputs.publishedPackages)[0].version }} 🚀"
-            
+        run: echo "::set-env name=PACKAGE_VERSION::$(echo ${{ steps.changesets.outputs.publishedPackages }} | jq -r '.[0].version')"
+
+      - name: Print version
+        if: steps.changesets.outputs.published == 'true'
+        run: echo "${{ PACKAGE_VERSION }} ......"
+
