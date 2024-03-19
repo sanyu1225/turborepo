@@ -1,5 +1,11 @@
 # turborepo-demo-core
 
+## 0.0.10
+
+### Patch Changes
+
+- efe0c89: typo
+
 ## 0.0.9
 
 ### Patch Changes
