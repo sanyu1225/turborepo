@@ -44,7 +44,7 @@ jobs:
         run: echo "::set-output name=PACKAGE_VERSION::$(echo ${{ steps.changesets.outputs.publishedPackages }} | jq -r '.[0].version')"
 
       - name: Print version
-        id: printVersion
         if: steps.changesets.outputs.published == 'true'
-        run: echo "${{ PACKAGE_VERSION }} ......"
+        run: echo "${{ steps.setVersion.outputs.PACKAGE_VERSION }} ......"
+
 
