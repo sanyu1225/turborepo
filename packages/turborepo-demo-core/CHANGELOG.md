@@ -1,5 +1,12 @@
 # turborepo-demo-core
 
+## 0.0.9
+
+### Patch Changes
+
+- 91093f2: update yml
+- c98e42d: test yml
+
 ## 0.0.8
 
 ### Patch Changes
