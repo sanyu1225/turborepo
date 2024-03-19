@@ -1,5 +1,11 @@
 # turborepo-demo-core
 
+## 0.0.13
+
+### Patch Changes
+
+- 9f97c88: shell script
+
 ## 0.0.12
 
 ### Patch Changes
