@@ -41,7 +41,7 @@ jobs:
       - name: Set version from publishedPackages
         id: setVersion
         if: steps.changesets.outputs.published == 'true'
-        run: echo "::set-env name=PACKAGE_VERSION::$(echo ${{ steps.changesets.outputs.publishedPackages }} | jq -r '.[0].version')"
+        run: echo "::set-output name=PACKAGE_VERSION::$(echo ${{ steps.changesets.outputs.publishedPackages }} | jq -r '.[0].version')"
 
       - name: Print version
         id: printVersion
