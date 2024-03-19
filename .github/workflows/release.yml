@@ -41,7 +41,10 @@ jobs:
       - name: Set version from publishedPackages
         id: setVersion
         if: steps.changesets.outputs.published == 'true'
-        run: echo "PACKAGE_VERSION=${{ steps.changesets.outputs.publishedPackages }} | jq -r '.[0].version'" >> $GITHUB_OUTPUT
+        env:
+          PACKAGE_VERSION: ${{ steps.changesets.outputs.publishedPackages }}
+
+        run: echo "PACKAGE_VERSION=$(echo $PACKAGE_VERSION | jq -r '.[0].version')" >> $GITHUB_OUTPUT
 
       - name: Print version
         if: steps.changesets.outputs.published == 'true'
