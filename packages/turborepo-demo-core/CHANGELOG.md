@@ -1,5 +1,11 @@
 # turborepo-demo-core
 
+## 0.0.8
+
+### Patch Changes
+
+- 3c82070: test publish
+
 ## 0.0.7
 
 ### Patch Changes
