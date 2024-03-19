@@ -39,10 +39,12 @@ jobs:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Set version from publishedPackages
+        id: setVersion
         if: steps.changesets.outputs.published == 'true'
         run: echo "::set-env name=PACKAGE_VERSION::$(echo ${{ steps.changesets.outputs.publishedPackages }} | jq -r '.[0].version')"
 
       - name: Print version
+        id: printVersion
         if: steps.changesets.outputs.published == 'true'
         run: echo "${{ PACKAGE_VERSION }} ......"
 
