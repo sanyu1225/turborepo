@@ -40,4 +40,4 @@ jobs:
 
       - name: Print version if a publish happens
         if: steps.changesets.outputs.published == 'true'
-        run: echo "A new version of ${GITHUB_REPOSITORY} was published! ${{ steps.changesets.outputs.publishedPackages[0].version }} 🚀"
+        run: echo "A new version of ${GITHUB_REPOSITORY} was published! ${{ steps.changesets.outputs.publishedPackages[0].version }}! ${{ steps.changesets.outputs.publishedPackages[0].version }} 🚀"
