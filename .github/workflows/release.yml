@@ -40,11 +40,5 @@ jobs:
 
       - name: Print version if a publish happens
         if: steps.changesets.outputs.published == 'true'
-        run: echo "A new version of ${GITHUB_REPOSITORY} was published! ${{ steps.changesets.outputs.publishedPackages }}! ${{ steps.changesets.outputs.publishedPackages[0].version }} 🚀"
-
-      - name: set version in variables
-        id: print
-        run:  PACKAGE_VERSION=$(cat packages/turborepo-demo-core/package.json | jq '.version' | tr -d '"') 
-              echo "current-version=${PACKAGE_VERSION}" >> $GITHUB_OUTPUT
-              echo " ${{ steps.package-version.outputs.current-version}}. ~~~ "
+        run: echo "A new version of ${GITHUB_REPOSITORY} was published! ${{ steps.changesets.outputs.publishedPackages }}! ${{ toJSON(steps.changesets.outputs.publishedPackages)[0].version }} 🚀"
             
