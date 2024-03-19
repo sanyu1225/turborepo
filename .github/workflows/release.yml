@@ -47,4 +47,7 @@ jobs:
         uses: martinbeentjes/npm-get-version-action@v1.3.1
         with:
           path: packages/turborepo-demo-core
+
+      - name: print verion..
+        id: print
         run: echo " ${{ steps.package-version.outputs.current-version}}. ~~~ "
