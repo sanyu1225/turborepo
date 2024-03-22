@@ -1,5 +1,11 @@
 # turborepo-demo-core
 
+## 0.1.0
+
+### Minor Changes
+
+- bf053b0: test publish..
+
 ## 0.0.15
 
 ### Patch Changes
