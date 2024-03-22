@@ -45,10 +45,6 @@ jobs:
           PACKAGE_VERSION: ${{ steps.changesets.outputs.publishedPackages }}
         run: echo "PACKAGE_VERSION=$(echo $PACKAGE_VERSION | jq -r '.[0].version')" >> $GITHUB_OUTPUT
 
-#      - name: Print version
-#        if: steps.changesets.outputs.published == 'true'
-#        run: echo "${{ steps.setVersion.outputs.PACKAGE_VERSION }} ......"
-
       - name: Trigger example repo github action
         if: steps.changesets.outputs.published == 'true'
         run: |
